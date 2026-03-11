@@ -1,12 +1,6 @@
 # Java_Projects
 Repository containing my Java projects and exercises developed during my studies in programming and software development. The goal is to practice core concepts, improve problem-solving skills, and document my learning journey.
 
-# Java Projects 
-
-This repository contains Java projects and exercises developed during my programming studies.
-
-The main goal of this repository is to practice programming logic, object-oriented programming (OOP), and software development concepts while documenting my learning journey in Java.
-
 ---
 
 ## About
