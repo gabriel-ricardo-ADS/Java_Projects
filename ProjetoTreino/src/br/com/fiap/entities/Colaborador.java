@@ -64,9 +64,9 @@ public class Colaborador {
     @Override
     public String toString() {
         return "Colaborador " +
-                "\nnome:'" + nome + '\'' +
-                "\ncpf:'" + cpf + '\'' +
-                "\ncargo:'" + cargo + '\'' +
+                "\nnome:" + nome +
+                "\ncpf:" + cpf +
+                "\ncargo:" + cargo +
                 "\nidade:" + idade +
                 "\nsalario:" + salario + endereco;
     }

@@ -46,8 +46,8 @@ public class Produto {
     public String toString() {
         return "\n\nProduto" +
                 "\ncodigo:" + codigo +
-                "\ntipo:'" + tipo + '\'' +
-                "\nmarca:'" + marca + '\'' +
+                "\ntipo:" + tipo +
+                "\nmarca:" + marca +
                 "\npreco:" + preco;
     }
 }
