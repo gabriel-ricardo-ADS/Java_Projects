@@ -39,23 +39,8 @@ public class TesteSistema {
 
         // saidas
         System.out.println(
-                "Nome: " + objColaborador.getNome() +
-                        "\nCPF: " + objColaborador.getCpf() +
-                        "\nIdade: " + objColaborador.getIdade() +
-                        "\nCargo: " + objColaborador.getCargo() +
-                        "\nSalario: " + objColaborador.getSalario() +
-                        "\n\nEndereço\nLogradouro: " + objColaborador.getEndereco().getLogradouro() +
-                        "\nNumero: " + objColaborador.getEndereco().getNumero() +
-                        "\nComplemento :" + objColaborador.getEndereco().getComplemento() +
-                        "\nCep: " + objColaborador.getEndereco().getCep() +
-                        "\nBairro: " + objColaborador.getEndereco().getBairro() +
-                        "\nCidade: " + objColaborador.getEndereco().getCidade() +
-                        "\nEstado: " + objColaborador.getEndereco().getEstado() +
-                        "\n\nProduto\nCodigo: " + objProduto.getCodigo() +
-                        "\nTipo: " + objProduto.getTipo() +
-                        "\nMarca: " + objProduto.getMarca() +
-                        "\nPreco: " + objProduto.getPreco()
-                );
+                objColaborador + "" + objProduto
+        );
 
 
     }

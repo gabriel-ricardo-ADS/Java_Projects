@@ -68,5 +68,19 @@ public class Endereco {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    //toString
+
+    @Override
+    public String toString() {
+        return "\n\nEndereco" +
+                "\nlogradouro:" + logradouro + '\'' +
+                "\nnumero:'" + numero +
+                "\ncomplemento:'" + complemento + '\'' +
+                "\ncep:'" + cep + '\'' +
+                "\nbairro:'" + bairro + '\'' +
+                "\ncidade:'" + cidade + '\'' +
+                "\nestado:" + estado;
+    }
 }
 

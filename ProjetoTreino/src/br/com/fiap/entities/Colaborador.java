@@ -58,4 +58,16 @@ public class Colaborador {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
+
+    //toString
+
+    @Override
+    public String toString() {
+        return "Colaborador " +
+                "\nnome:'" + nome + '\'' +
+                "\ncpf:'" + cpf + '\'' +
+                "\ncargo:'" + cargo + '\'' +
+                "\nidade:" + idade +
+                "\nsalario:" + salario + endereco;
+    }
 }

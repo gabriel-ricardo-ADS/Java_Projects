@@ -39,4 +39,15 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    //toString
+
+    @Override
+    public String toString() {
+        return "\n\nProduto" +
+                "\ncodigo:" + codigo +
+                "\ntipo:'" + tipo + '\'' +
+                "\nmarca:'" + marca + '\'' +
+                "\npreco:" + preco;
+    }
 }
