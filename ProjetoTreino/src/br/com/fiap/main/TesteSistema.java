@@ -19,7 +19,7 @@ public class TesteSistema {
         objColaborador.setCpf("123.456.789-10");
         objColaborador.setCargo("Gerente");
         objColaborador.setIdade(21);
-        objColaborador.setSalario(5.000);
+        objColaborador.setSalario(5000.0);
 
         objEndereco.setLogradouro("Rua Aca");
         objEndereco.setNumero(90);
