@@ -4,6 +4,8 @@ import br.com.fiap.entities.Cliente;
 import br.com.fiap.entities.Endereco;
 import br.com.fiap.entities.Produto;
 
+import javax.swing.*;
+
 
 public class TesteSistema {
 
@@ -16,25 +18,25 @@ public class TesteSistema {
         Produto objProduto = new Produto();
 
         //entradas
-        objCliente.setNome("Gabriel");
-        objCliente.setIdade(20);
-        objCliente.setCpf("123456789-10");
-        objCliente.setAltura(1.80);
-        objCliente.setCalcado(41);
+        objCliente.setNome(JOptionPane.showInputDialog("Informações pessoais\nInforme o nome: "));
+        objCliente.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Informe a idade: ")));
+        objCliente.setCpf(JOptionPane.showInputDialog("Informe o cpf: "));
+        objCliente.setAltura(Double.parseDouble(JOptionPane.showInputDialog("Informe a altura: ")));
+        objCliente.setCalcado(Integer.parseInt(JOptionPane.showInputDialog("Informe o tamanho do calçado: ")));
         objCliente.setEndereco(objEndereco);
 
-        objEndereco.setLogradouro("Av. Paulista");
-        objEndereco.setNumero(100);
-        objEndereco.setComplemento("Ap");
-        objEndereco.setCep("02010-090");
-        objEndereco.setBairro("Paulista");
-        objEndereco.setCidade("São Paulo");
-        objEndereco.setEstado("SP");
+        objEndereco.setLogradouro(JOptionPane.showInputDialog("Endereço\nInforme o logradouro: "));
+        objEndereco.setNumero(Integer.parseInt(JOptionPane.showInputDialog("Informe a numero: ")));
+        objEndereco.setComplemento(JOptionPane.showInputDialog("Informe o complemento: "));
+        objEndereco.setCep(JOptionPane.showInputDialog("Informe o cep: "));
+        objEndereco.setBairro(JOptionPane.showInputDialog("Informe o Bairro: "));
+        objEndereco.setCidade(JOptionPane.showInputDialog("Informe a cidade: "));
+        objEndereco.setEstado(JOptionPane.showInputDialog("Informe o Estado: "));
 
-        objProduto.setCodigo(123456789);
-        objProduto.setTipo("Calçado");
-        objProduto.setMarca("Nike");
-        objProduto.setPreco(449.90);
+        objProduto.setCodigo(Integer.parseInt(JOptionPane.showInputDialog("Produto\naInforme o codigo: ")));
+        objProduto.setTipo(JOptionPane.showInputDialog("Informe o tipo: "));
+        objProduto.setMarca(JOptionPane.showInputDialog("Informe a marca: "));
+        objProduto.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço: ")));
 
         //saidas
         System.out.println(
