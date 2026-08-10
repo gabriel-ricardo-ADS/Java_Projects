@@ -4,8 +4,7 @@ import br.com.fiap.entities.Produto;
 
 import javax.swing.*;
 
-public class TesteVetor {
-
+public class TesteVetorWhile {
     static String texto(String j){
         return JOptionPane.showInputDialog(j);
     }
@@ -20,14 +19,16 @@ public class TesteVetor {
     public static void main(String[] args) {
 
         // vetor de produtos determina a quantidade máxima de produtos
-        Produto[] vetorProdutos =  new Produto[3];  // [0] [1] [2]
+        Produto[] vetorProdutos = new Produto[3];  // [0] [1] [2]
 
         // indice para controlar a alocação de produtos nos vetores
-        int indice = 0;    // indice++
+        int indice = 0;// indice++
+
+        int condicao = 0;
 
         // Laço de repetição          do   / while
-        //                            faça / enquanto
-        do{
+        //                            enquanto / faça
+        while(condicao == 0) {
             //Entradas
             vetorProdutos[indice] = new Produto();
             vetorProdutos[indice].setCodigo(inteiro("Código"));
@@ -37,15 +38,18 @@ public class TesteVetor {
 
             indice++;
 
-        }while( JOptionPane.showConfirmDialog(null,
-                "Adicionar mais produto no carrinho?",
-                "CARRINHO DE COMPRAS",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE
-        )  ==0 );
+
+            condicao = JOptionPane.showConfirmDialog(null,
+                    "Adicionar mais produto no carrinho?",
+                    "CARRINHO DE COMPRAS",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE
+            );
+        }
+
 
         // Saídas utilizando o for
-        for(int buscar=0; buscar < indice; buscar++){
+        for (int buscar = 0; buscar < indice; buscar++) {
             System.out.println(
                     vetorProdutos[buscar].toString()
             );
