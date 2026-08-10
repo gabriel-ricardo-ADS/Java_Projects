@@ -17,39 +17,41 @@ public class TesteVetor {
     static double real(String j){
         return Double.parseDouble(JOptionPane.showInputDialog(j));
     }
+    public static void main(String[] args) {
 
+        // vetor de produtos determina a quantidade máxima de produtos
+        Produto[] vetorProdutos =  new Produto[3];  // [0] [1] [2]
 
-    static void main(String[] args) {
+        // indice para controlar a alocação de produtos nos vetores
+        int indice = 0;    // indice++
 
-
-
-        Produto[] vetorProdutos = new Produto[3];
-
-        int indice = 0;
-
-        do {
+        // Laço de repetição          do   / while
+        //                            faça / enquanto
+        do{
+            //Entradas
             vetorProdutos[indice] = new Produto();
             vetorProdutos[indice].setCodigo(inteiro("Código"));
-            vetorProdutos[indice].setTipo(texto("Tipo"));
+            vetorProdutos[indice].setTipo(texto("Tipo do produto"));
             vetorProdutos[indice].setMarca(texto("Marca"));
-            vetorProdutos[indice].setValor(real("Valor"));
+            vetorProdutos[indice].setPreco(real("Preço"));
 
-            indice ++;
+            indice++;
 
-        }while(JOptionPane.showConfirmDialog(null,
-                "Adicionar mais produto?", "Carrinho de compras",
-                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE) == 0);
+        }while( JOptionPane.showConfirmDialog(null,
+                "Adicionar mais produto no carrinho?",
+                "CARRINHO DE COMPRAS",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+        )  ==0 );
 
-        for(int buscar = 0; buscar<indice; buscar++){
+        // Saídas utilizando o for
+        for(int buscar=0; buscar < indice; buscar++){
             System.out.println(
                     "\n\nCódigo: " + vetorProdutos[buscar].getCodigo() +
-                    "\nTipo: " + vetorProdutos[buscar].getTipo() +
-                    "\nMarca: " + vetorProdutos[buscar].getMarca() +
-                    "\nValor: " + vetorProdutos[buscar].getValor()
+                            "\nTipo: " + vetorProdutos[buscar].getTipo() +
+                            "\nMarca: " + vetorProdutos[buscar].getMarca() +
+                            "\nPreço: " + vetorProdutos[buscar].getPreco()
             );
-
         }
-
     }
-
 }

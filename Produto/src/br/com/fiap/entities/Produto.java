@@ -1,10 +1,21 @@
 package br.com.fiap.entities;
 
 public class Produto {
+
     private int codigo;
     private String tipo;
     private String marca;
-    private double valor;
+    private double preco;
+
+    public Produto() {
+    }
+
+    public Produto(int codigo, String tipo, String marca, double preco) {
+        this.codigo = codigo;
+        this.tipo = tipo;
+        this.marca = marca;
+        this.preco = preco;
+    }
 
     public int getCodigo() {
         return codigo;
@@ -30,32 +41,21 @@ public class Produto {
         this.marca = marca;
     }
 
-    public double getValor() {
-        return valor;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
-    public Produto() {
-    }
-
-    public Produto(int codigo, String tipo, String marca, double valor) {
-        this.codigo = codigo;
-        this.tipo = tipo;
-        this.marca = marca;
-        this.valor = valor;
-
-
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     @Override
     public String toString() {
-        return "\n\nProduto" +
-                "\ncodigo: " + codigo +
-                "\ntipo: " + tipo +
-                "\nmarca: " + marca +
-                "\nvalor: " + valor;
+        return "\n\nProduto " +
+                "\ncódigo=" + codigo +
+                "\ntipo='" + tipo + '\'' +
+                "\nmarca='" + marca + '\'' +
+                "\npreço=" + preco;
     }
 }
+
